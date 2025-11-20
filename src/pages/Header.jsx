@@ -6,7 +6,7 @@ const Header = () => {
         return (
                 <>
                         <div style={{ display: "flex", flexDirection: "column", position: "fixed", top: "0", zIndex: "999", width: "100vw", background: "white", }}>
-                                <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "35px", maxHeight: "30px", width: "100%" }} className="text-[1.2vh]">
+                                <div style={{ display: "flex", flexDirection: "row", justifyContent: "end", gap: "35px", maxHeight: "30px", width: "100%" }} className="text-[1.5vh]">
                                         <div >Helpline 18008898529</div>
                                         <div>Login to Seller</div>
                                         <div style={{ paddingRight: "40px" }}>Become a Seller !</div>
@@ -15,8 +15,8 @@ const Header = () => {
                                         <div ><img src="/img/logo/logo.png" style={{ height: "95px" }} className="min-w-[15vw] max-w-[29vw]" /></div>
                                         <div style={{ width: "45vw" }} className="flex flex-row justify-center items-center"><input type="search" name="" id="" placeholder="Search Product, Category, Brand" style={{ width: "27vw", borderRadius: "10px", padding: "5px", paddingLeft: "1vw", border: "1px solid gray", }} /></div>
                                         <div ><img src="/img/icon/logo.png" style={{ height: "25px", }} className="max-w-[6vw]" /></div>
-                                        <Link to="/login" className=" cursor-pointer  text-black rounded-full text-center font-normal text-[1.5vh] mr-[1vw]" style={{ maxWidth: "6vw", textDecoration: "none", }}> Login</Link>
-                                        <Link to="/Register" style={{ maxWidth: "6vw", textDecoration: "none" }} className=" cursor-pointer   rounded-full text-center font-normal text-[1.5vh] text-black hover:text-blue-500 ">Register</Link>
+                                        <Link to="/login" className=" cursor-pointer  text-black rounded-full text-center font-semibold text-[1.7vh] mr-[1vw]" style={{ maxWidth: "6vw", textDecoration: "none", }}> Login</Link>
+                                        <Link to="/Register" style={{ maxWidth: "6vw", textDecoration: "none" }} className=" cursor-pointer   rounded-full text-center font-semibold text-[1.7vh] text-black hover:text-blue-500 ">Register</Link>
                                         <img src="/img/Cart.png" alt="" className=" ml-[2vw] h-[100%]" />
                                 </div>
                                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", gap: "2vw", width: "100vw", padding: "1px ", alignItems: "center", marginTop: "1vh", }} className="bg-gray-400 font-semibold pr-[2vw]">
@@ -25,7 +25,7 @@ const Header = () => {
                                                 <Link to="/" style={{ textDecoration: 'none', color: "black", }} className="text-[2.1vh] ">Home</Link>
                                                 <Link to="/about" style={{ textDecoration: 'none', color: "black" }} className="text-[2.1vh]">Blogs</Link>
                                                 <Link to="/Contact" style={{ textDecoration: 'none', color: "black" }} className="text-[2.1vh]"> Brands</Link>
-                                                <details style={{ border: "1px solid #ccc", borderRadius: "5px", position: "relative", }} className="bg-red-200  ">
+                                                <details style={{ border: "1px solid #ccc", borderRadius: "5px", position: "relative", }}>
                                                         <summary style={{ padding: "2px", color: "black", cursor: "pointer" }} className="rounded-lg border-1 border-gray-600 text-[2.3vh]">
                                                                 Categories
                                                         </summary>

@@ -22,7 +22,7 @@ function Home() {
     }, []);
 
     return (
-        <div className="min-pt-[70px], max-pt-[90px] ">
+        <div className="min-pt-[75px] ">
             <main>
 
                 <section id="carousel" style={{ marginTop: "10px" }}>
@@ -92,7 +92,7 @@ function Home() {
                                         </p>
                                     </div> */}
                                 </div>
-
+``
                                 {/* Slide 3 */}
                                 <div className="carousel-item">
                                     <img
@@ -793,9 +793,9 @@ function Home() {
                                                                 key={i}
                                                                 style={{
                                                                         flex: "1 1 calc(25% - 20px)",
-                                                                        minWidth: "250px",
+                                                                        minWidth: "200px",
                                                                         backgroundColor: "#f9f9f9",
-                                                                        padding: "25px 20px",
+                                                                        padding: "20px 15px",
                                                                         borderRadius: "12px",
                                                                         boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
                                                                         transition: "transform 0.3s, box-shadow 0.3s",
@@ -822,7 +822,7 @@ function Home() {
                                                                                 src={item.icon}
                                                                                 alt={item.title}
                                                                                 style={{
-                                                                                        height: "180px",
+                                                                                        height: "40px",
                                                                                         width: "auto",
                                                                                         objectFit: "contain",
                                                                                 }}
@@ -834,8 +834,8 @@ function Home() {
                                                                                 fontFamily: "'Montserrat', sans-serif",
                                                                                 fontWeight: "600",
                                                                                 color: "#333333",
-                                                                                fontSize: "20px",
-                                                                                marginBottom: "10px",
+                                                                                fontSize: "18px",
+                                                                                marginBottom: "6px",
                                                                         }}
                                                                 >
                                                                         {item.title}
@@ -845,7 +845,7 @@ function Home() {
                                                                         style={{
                                                                                 fontFamily: "'Montserrat', sans-serif",
                                                                                 fontSize: "15px",
-                                                                                lineHeight: "1.6",
+                                                                                lineHeight: "1.2",
                                                                                 color: "#555555",
                                                                                 margin: "0",
                                                                         }}
@@ -1077,7 +1077,7 @@ function Home() {
                                                                 }}
                                                         >
                                                                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
-                                                                        <img src="/img/professionals.webp" alt="professionals" style={{ height: "200px" }} />
+                                                                        <img src="/img/professionals.webp" alt="professionals" style={{ height: "40px" }} />
                                                                 </div>
                                                         </div>
                                                         <div
@@ -1113,7 +1113,7 @@ function Home() {
                                                         >
                                                                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
 
-                                                                        <img src="/img/insured work.avif" alt="professionals" style={{ height: "200px" }} />
+                                                                        <img src="/img/insured work.avif" alt="professionals" style={{ height: "40px" }} />
                                                                 </div>
                                                         </div>
                                                         <div
@@ -1148,7 +1148,7 @@ function Home() {
                                                                 }}
                                                         >
                                                                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
-                                                                        <img src="/img/Satisfaction.jpg" alt="professionals" style={{ height: "200px" }} />
+                                                                        <img src="/img/Satisfaction.jpg" alt="professionals" style={{ height: "40px" }} />
                                                                 </div>
                                                         </div>
                                                         <div
@@ -1184,7 +1184,7 @@ function Home() {
                                                         >
                                                                 <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }}>
 
-                                                                        <img src="/img/Payment.png" alt="professionals" style={{ height: "200px" }} />
+                                                                        <img src="/img/Payment.png" alt="professionals" style={{ height: "40px" }} />
                                                                 </div>
                                                         </div>
                                                         <div
