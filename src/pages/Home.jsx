@@ -2,13 +2,11 @@ import { useEffect } from "react";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import WOW from "wowjs";
+
 
 function Home() {
-    useEffect(() => {
-        // WOW animations
-        new WOW.WOW().init();
 
+    useEffect(() => {
         // Auto-start carousel after component mounts
         setTimeout(() => {
             const el = document.getElementById("header-carousel");
