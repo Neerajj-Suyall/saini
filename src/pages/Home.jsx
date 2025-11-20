@@ -22,7 +22,7 @@ function Home() {
     }, []);
 
     return (
-        <div style={{ paddingTop: "70px" }}>
+        <div className="min-pt-[70px], max-pt-[90px] ">
             <main>
 
                 <section id="carousel" style={{ marginTop: "10px" }}>
@@ -53,7 +53,8 @@ function Home() {
                                             width: "100vw",
                                             objectFit: "cover",
                                         //     marginTop: "-20px",
-                                            marginBottom: "-70px"
+                                            marginBottom: "-70px",
+                                            height:"fit-content"
                                         }}
                                     />
 
