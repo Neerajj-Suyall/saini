@@ -22,7 +22,7 @@ function Home() {
     }, []);
 
     return (
-        <div className="min-pt-[75px] ">
+        <div className="pt-[75px] ">
             <main>
 
                 <section id="carousel" style={{ marginTop: "10px" }}>
