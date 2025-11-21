@@ -45,6 +45,7 @@ function Home() {
 
                                 {/* Slide 1 */}
                                 <div className="carousel-item active">
+                                        
                                     <img
                                         src="/img/slider/1.png"
                                         className="d-block w-100"
@@ -52,21 +53,13 @@ function Home() {
                                         style={{
                                             width: "100vw",
                                             objectFit: "cover",
-                                        //     marginTop: "-20px",
-                                            marginBottom: "-70px",
-                                            height:"fit-content"
+//                                             marginTop: "-20px",
+                                            marginBottom: "-260px",
+                                            height:"fit-content",
+                                            overflow:"clip"
                                         }}
                                     />
-
-                                    {/* ⭐ Animated Text Inside Slide */}
-                                    {/* <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                                        <h1 className="animate__animated animate__fadeInDown">
-                                            Welcome to Our Website
-                                        </h1>
-                                        <p className="animate__animated animate__fadeInUp animate__delay-1s">
-                                            Discover amazing services and solutions
-                                        </p>
-                                    </div> */}
+                                  
                                 </div>
 
                                 {/* Slide 2 */}
@@ -78,19 +71,11 @@ function Home() {
                                         style={{
                                             width: "100vw",
                                             objectFit: "cover",
-                                        //     marginTop: "-20px",
-                                            marginBottom: "-70px"
+//                                             marginTop: "-20px",
+                                            marginBottom: "-185px",
+                                            overflow:"clip"
                                         }}
                                     />
-{/* 
-                                    <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                                        <h1 className="animate__animated animate__fadeInDown">
-                                            Innovative Solutions
-                                        </h1>
-                                        <p className="animate__animated animate__fadeInUp animate__delay-1s">
-                                            We help your business grow faster
-                                        </p>
-                                    </div> */}
                                 </div>
 ``
                                 {/* Slide 3 */}
@@ -102,19 +87,11 @@ function Home() {
                                         style={{
                                             width: "100vw",
                                             objectFit: "cover",
-                                        //     marginTop: "-20px",
-                                            marginBottom: "-70px"
+//                                             marginTop: "-20px",
+                                            marginBottom: "-140px",
+                                            overflow:"clip"
                                         }}
                                     />
-
-                                    {/* <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                                        <h1 className="animate__animated animate__fadeInDown">
-                                            Grow With Confidence
-                                        </h1>
-                                        <p className="animate__animated animate__fadeInUp animate__delay-1s">
-                                            Trusted by professionals worldwide
-                                        </p>
-                                    </div> */}
                                 </div>
 
                             </div>
