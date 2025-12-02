@@ -2,14 +2,24 @@ import React from "react";
 
 const Contact = () => {
         return (
-                <>
+                <div className="pt-20">
+                        <section className="w-full bg-blue-100 text-black py-20">
+                                <div className="container mx-auto px-4 text-center">
+                                        <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+                                        <p className="text-lg max-w-2xl mx-auto opacity-90 leading-relaxed">
+                                                We’re here to help with all your AC, Refrigerator, Washing Machine,
+                                                and Cooler service needs. Contact us for quick assistance, expert
+                                                support, and reliable solutions whenever you need us.
+                                        </p>
+                                </div>
+                        </section>
                         <section
                                 id="contact"
                                 style={{
                                         padding: "60px 0",
                                         backgroundColor: "#ffffff",
                                         fontFamily: "'Montserrat', sans-serif",
-                                        paddingTop:"150px"
+                                        paddingTop: "150px"
                                 }}
                         >
                                 <div className="container" style={{ margin: "0 auto" }}>
@@ -151,7 +161,7 @@ const Contact = () => {
     `}
                                 </style>
                         </section>
-                </>
+                </div>
 
         );
 };

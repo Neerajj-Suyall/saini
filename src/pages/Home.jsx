@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "animate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ProductCard from "./ProductCard"
 
 
 function Home() {
@@ -172,101 +173,102 @@ function Home() {
                                                 }}
                                         >
                                                 {[
-                                                        { id: 1, name: "Smart Inverter AC", price: "₹38,999", img: "/img/products/acc.jpg", star:2 },
+                                                        { id: 1, name: "Smart Inverter AC", price: "₹38,999", img: "/img/products/acc.jpg", star:2, description:"",  },
                                                         { id: 2, name: "Smart Refrigerator", price: "₹27,999", img: "/img/products/coler.webp", star:3  },
                                                         { id: 3, name: "Smart Water Purifier", price: "₹11,999", img: "/img/products/double door.avif", star:5  },
                                                         { id: 4, name: "Turbo Washing Machine", price: "₹24,499", img: "/img/products/double.jpg", star:4  },
                                                 ].map((item) => (
-                                                        <div
-                                                                key={item.id}
-                                                                style={{
-                                                                        flex: "1 1 calc(25% - 20px)",
-                                                                        minWidth: "250px",
-                                                                        backgroundColor: "#ffffff",
-                                                                        justifyItems: "center",
-                                                                        textAlign: "center",
-                                                                        borderRadius: "12px",
-                                                                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.05)",
-                                                                        transition: "transform 0.3s, box-shadow 0.3s",
-                                                                }}
-                                                                onMouseEnter={(e) => {
-                                                                        e.currentTarget.style.border = "1px solid cyan"
-                                                                        e.currentTarget.style.boxShadow = "0 8px 16px rgba(0,0,0,0.1)";
-                                                                }}
-                                                                onMouseLeave={(e) => {
-                                                                        e.currentTarget.style.border = "0"
-                                                                        e.currentTarget.style.transform = "translateY(0)";
-                                                                        e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.05)";
-                                                                }}
-                                                        >
-                                                                {/* Product Image */}
-                                                                <div
-                                                                        style={{
-                                                                                display: "flex",
-                                                                                justifyContent: "center",
-                                                                                alignItems: "center",
-                                                                                height: "230px",
-                                                                                padding: "15px",
-                                                                        }}
-                                                                >
-                                                                        <img
-                                                                                src={item.img}
-                                                                                alt={item.name}
-                                                                                style={{
-                                                                                        maxHeight: "100%",
-                                                                                        maxWidth: "100%",
-                                                                                        objectFit: "contain",
-                                                                                        borderTopLeftRadius: "12px",
-                                                                                        borderTopRightRadius: "12px",
-                                                                                }}
-                                                                        />
-                                                                </div>
+                                                         <ProductCard item={item}/>
+                                                        // <div
+                                                        //         key={item.id}
+                                                        //         style={{
+                                                        //                 flex: "1 1 calc(25% - 20px)",
+                                                        //                 minWidth: "250px",
+                                                        //                 backgroundColor: "#ffffff",
+                                                        //                 justifyItems: "center",
+                                                        //                 textAlign: "center",
+                                                        //                 borderRadius: "12px",
+                                                        //                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.05)",
+                                                        //                 transition: "transform 0.3s, box-shadow 0.3s",
+                                                        //         }}
+                                                        //         onMouseEnter={(e) => {
+                                                        //                 e.currentTarget.style.border = "1px solid cyan"
+                                                        //                 e.currentTarget.style.boxShadow = "0 8px 16px rgba(0,0,0,0.1)";
+                                                        //         }}
+                                                        //         onMouseLeave={(e) => {
+                                                        //                 e.currentTarget.style.border = "0"
+                                                        //                 e.currentTarget.style.transform = "translateY(0)";
+                                                        //                 e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.05)";
+                                                        //         }}
+                                                        // >
+                                                        //         {/* Product Image */}
+                                                        //         <div
+                                                        //                 style={{
+                                                        //                         display: "flex",
+                                                        //                         justifyContent: "center",
+                                                        //                         alignItems: "center",
+                                                        //                         height: "230px",
+                                                        //                         padding: "15px",
+                                                        //                 }}
+                                                        //         >
+                                                        //                 <img
+                                                        //                         src={item.img}
+                                                        //                         alt={item.name}
+                                                        //                         style={{
+                                                        //                                 maxHeight: "100%",
+                                                        //                                 maxWidth: "100%",
+                                                        //                                 objectFit: "contain",
+                                                        //                                 borderTopLeftRadius: "12px",
+                                                        //                                 borderTopRightRadius: "12px",
+                                                        //                         }}
+                                                        //                 />
+                                                        //         </div>
 
-                                                                {/* Product Details */}
-                                                                <div className="flex flex-col items-center justify-center" style={{ padding: "15px" }}>
-                                                                        <h6
-                                                                                style={{
-                                                                                        fontWeight: "600",
-                                                                                        color: "#212529",
-                                                                                        marginBottom: "8px",
-                                                                                        fontFamily: "'Montserrat', sans-serif",
-                                                                                }}
-                                                                        >
-                                                                                {item.name}
-                                                                        </h6>
-                                                                        <p
-                                                                                style={{
-                                                                                        color: "#6c757d",
-                                                                                        fontSize: "14px",
-                                                                                        marginBottom: "10px",
-                                                                                        fontFamily: "'Montserrat', sans-serif",
-                                                                                }}
-                                                                        >
-                                                                                {item.price}
-                                                                        </p>
-                                                                        <div className="w-fit flex flex-row items-center justify-center" style={{ padding:"10px 0 15px 0"}}>
-                                                                                { item.star >= 1 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 2 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 3 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 4 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 5 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                        </div>
-                                                                                <button
-                                                                                style={{
-                                                                                        backgroundColor: "#0d6efd",
-                                                                                        color: "#ffffff",
-                                                                                        border: "none",
-                                                                                        padding: "8px 16px",
-                                                                                        borderRadius: "50px",
-                                                                                        fontSize: "14px",
-                                                                                        cursor: "pointer",
-                                                                                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                                                                                }}
-                                                                        >
-                                                                                🛒 Add to Cart
-                                                                        </button>
-                                                                </div>
-                                                        </div>
+                                                        //         {/* Product Details */}
+                                                        //         <div className="flex flex-col items-center justify-center" style={{ padding: "15px" }}>
+                                                        //                 <h6
+                                                        //                         style={{
+                                                        //                                 fontWeight: "600",
+                                                        //                                 color: "#212529",
+                                                        //                                 marginBottom: "8px",
+                                                        //                                 fontFamily: "'Montserrat', sans-serif",
+                                                        //                         }}
+                                                        //                 >
+                                                        //                         {item.name}
+                                                        //                 </h6>
+                                                        //                 <p
+                                                        //                         style={{
+                                                        //                                 color: "#6c757d",
+                                                        //                                 fontSize: "14px",
+                                                        //                                 marginBottom: "10px",
+                                                        //                                 fontFamily: "'Montserrat', sans-serif",
+                                                        //                         }}
+                                                        //                 >
+                                                        //                         {item.price}
+                                                        //                 </p>
+                                                        //                 <div className="w-fit flex flex-row items-center justify-center" style={{ padding:"10px 0 15px 0"}}>
+                                                        //                         { item.star >= 1 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
+                                                        //                         { item.star >= 2 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
+                                                        //                         { item.star >= 3 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
+                                                        //                         { item.star >= 4 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
+                                                        //                         { item.star >= 5 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
+                                                        //                 </div>
+                                                        //                         <button
+                                                        //                         style={{
+                                                        //                                 backgroundColor: "#0d6efd",
+                                                        //                                 color: "#ffffff",
+                                                        //                                 border: "none",
+                                                        //                                 padding: "8px 16px",
+                                                        //                                 borderRadius: "50px",
+                                                        //                                 fontSize: "14px",
+                                                        //                                 cursor: "pointer",
+                                                        //                                 boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                                                        //                         }}
+                                                        //                 >
+                                                        //                         🛒 Add to Cart
+                                                        //                 </button>
+                                                        //         </div>
+                                                        // </div>
                                                 ))}
                                         </div>
                                 </div>
@@ -322,73 +324,7 @@ function Home() {
                                                         { id: 7, name: "Water Purifier RO+UV", price: "₹9,999", img: "/img/products/Product 3.webp" ,star:2},
                                                         { id: 8, name: "Portable Cooler", price: "₹7,499", img: "/img/products/Product 4.webp",star:3 },
                                                 ].map((item) => (
-                                                        <div
-                                                                key={item.id}
-                                                                style={{
-                                                                        flex: "1 1 calc(25% - 20px)",
-                                                                        minWidth: "250px",
-                                                                        backgroundColor: "#fff",
-                                                                        borderRadius: "12px",
-                                                                        boxShadow: "0 4px 8px rgba(0,0,0,0.05)",
-                                                                        textAlign: "center",
-                                                                        justifyItems: "center",
-                                                                        transition: "transform 0.3s",
-                                                                }}
-                                                                onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-5px)", e.currentTarget.style.border = "1px solid cyan")}
-                                                                onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)",e.currentTarget.style.border = "0")}
-                                                        >
-                                                                <div
-                                                                        style={{
-                                                                                display: "flex",
-                                                                                justifyContent: "center",
-                                                                                alignItems: "center",
-                                                                                height: "230px",
-                                                                                padding: "15px",
-                                                                        }}
-                                                                >
-                                                                        <img
-                                                                                src={item.img}
-                                                                                alt={item.name}
-                                                                                style={{
-                                                                                        maxHeight: "100%",
-                                                                                        maxWidth: "100%",
-                                                                                        objectFit: "contain",
-                                                                                        borderTopLeftRadius: "12px",
-                                                                                        borderTopRightRadius: "12px",
-                                                                                }}
-                                                                        />
-                                                                </div>
-                                                                <div className="w-[100%] flex flex-col items-center justify-center" style={{ padding: "15px"}}>
-                                                                        <h6 style={{ fontWeight: "600", color: "#212529", marginBottom: "8px" }}>
-                                                                                {item.name}
-                                                                        </h6>
-                                                                        <p style={{ color: "#6c757d", fontSize: "14px", marginBottom: "10px" }}>
-                                                                                {item.price}
-                                                                        </p>
-                                                                        <div className="w-fit flex flex-row items-center justify-center" style={{ padding:"10px 0 15px 0"}}>
-                                                                                { item.star >= 1 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 2 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 3 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 4 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 5 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                        </div>
-                                                                        
-                                                                        <button
-                                                                                style={{
-                                                                                        backgroundColor: "#0d6efd",
-                                                                                        color: "white",
-                                                                                        border: "none",
-                                                                                        padding: "6px 14px",
-                                                                                        borderRadius: "50px",
-                                                                                        fontSize: "14px",
-                                                                                        cursor: "pointer",
-                                                                                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                                                                                }}
-                                                                        >
-                                                                                🛒 Add to Cart
-                                                                        </button>
-                                                                </div>
-                                                        </div>
+                                                        <ProductCard item={item}/>
                                                 ))}
                                         </div>
                                 </div>
@@ -450,98 +386,7 @@ function Home() {
                                                         { id: 3, name: "Smart Water Purifier", price: "₹11,999", img: "/img/products/double door.avif",star:4 },
                                                         { id: 4, name: "Turbo Washing Machine", price: "₹24,499", img: "/img/products/double.jpg",star:2 },
                                                 ].map((item) => (
-                                                        <div
-                                                                key={item.id}
-                                                                style={{
-                                                                        flex: "1 1 calc(25% - 20px)",
-                                                                        minWidth: "250px",
-                                                                        backgroundColor: "#ffffff",
-                                                                        borderRadius: "12px",
-                                                                        justifyItems:"center",
-                                                                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.05)",
-                                                                        textAlign: "center",
-                                                                        transition: "transform 0.3s, box-shadow 0.3s",
-                                                                }}
-                                                                onMouseEnter={(e) => {
-                                                                        e.currentTarget.style.border = "1px solid cyan"
-                                                                        e.currentTarget.style.boxShadow = "0 8px 16px rgba(0,0,0,0.1)";
-                                                                }}
-                                                                onMouseLeave={(e) => {
-                                                                        e.currentTarget.style.border = "0"
-                                                                        e.currentTarget.style.transform = "translateY(0)";
-                                                                        e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.05)";
-                                                                }}
-                                                        >
-                                                                {/* Product Image */}
-                                                                <div
-                                                                        style={{
-                                                                                display: "flex",
-                                                                                justifyContent: "center",
-                                                                                alignItems: "center",
-                                                                                height: "230px",
-                                                                                padding: "15px",
-                                                                        }}
-                                                                        
-                                                                >
-                                                                        <img
-                                                                                src={item.img}
-                                                                                alt={item.name}
-                                                                                style={{
-                                                                                        maxHeight: "100%",
-                                                                                        maxWidth: "100%",
-                                                                                        objectFit: "contain",
-                                                                                        borderTopLeftRadius: "12px",
-                                                                                        borderTopRightRadius: "12px",
-                                                                                }}
-                                                                        />
-                                                                </div>
-
-                                                                {/* Product Details */}
-                                                                <div  className="w-[100%] flex flex-col items-center justify-center" style={{ padding: "15px" }}>
-                                                                        <h6
-                                                                                style={{
-                                                                                        fontWeight: "600",
-                                                                                        color: "#212529",
-                                                                                        marginBottom: "8px",
-                                                                                        fontFamily: "'Montserrat', sans-serif",
-                                                                                }}
-                                                                        >
-                                                                                {item.name}
-                                                                        </h6>
-                                                                        <p
-                                                                                style={{
-                                                                                        color: "#6c757d",
-                                                                                        fontSize: "14px",
-                                                                                        marginBottom: "10px",
-                                                                                        fontFamily: "'Montserrat', sans-serif",
-                                                                                }}
-                                                                        >
-                                                                                {item.price}
-                                                                        </p>
-                                                                        <div className="w-fit flex flex-row items-center justify-center" style={{ padding:"10px 0 15px 0"}}>
-                                                                                { item.star >= 1 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 2 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 3 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 4 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                                { item.star >= 5 &&<img src="/img/Star.webp" alt="" style={{width:"20px" }} />}
-                                                                        </div>
-
-                                                                        <button
-                                                                                style={{
-                                                                                        backgroundColor: "#0d6efd",
-                                                                                        color: "#ffffff",
-                                                                                        border: "none",
-                                                                                        padding: "8px 16px",
-                                                                                        borderRadius: "50px",
-                                                                                        fontSize: "14px",
-                                                                                        cursor: "pointer",
-                                                                                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                                                                                }}
-                                                                        >
-                                                                                🛒 Add to Cart
-                                                                        </button>
-                                                                </div>
-                                                        </div>
+                                                        <ProductCard item={item}/>
                                                 ))}
                                         </div>
                                 </div>

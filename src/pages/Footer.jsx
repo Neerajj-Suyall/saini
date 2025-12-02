@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
         return (
@@ -68,34 +69,59 @@ const Footer = () => {
                                                 </div>
 
                                                 {/* Our Services */}
-                                                <div style={{ flex: "1 1 20%", minWidth: "150px" }}>
+                                                <div style={{ flex: "1 1 15%",}}>
                                                         <h3 style={{ color: "#fff", fontSize: "20px" }}>Our Services</h3>
                                                         <div
                                                                 style={{
-                                                                        display: "flex",
-                                                                        justifyContent: "space-between",
+                                                                
                                                                 }}
                                                         >
-                                                                <ul style={{ listStyle: "none", padding: 0 }}>
-                                                                        <li><div style={{ color: "#ccc", textDecoration: "none" }}>AC Services</div></li>
-                                                                        <li><div style={{ color: "#ccc", textDecoration: "none" }}>Refrigerator Services</div></li>
-                                                                        <li><div style={{ color: "#ccc", textDecoration: "none" }}>Water Purifier services </div></li>
-                                                                        <li><div style={{ color: "#ccc", textDecoration: "none" }}>AC/Refrigerator Refill</div></li>
-                                                                {/* </ul>
-
-                                                                <ul style={{ listStyle: "none", padding: 0 }}> */}
-                                                                        <li><div style={{ color: "#ccc", textDecoration: "none" }}>Refrigerator Maintenance</div></li>
-                                                                        <li><div style={{ color: "#ccc", textDecoration: "none" }}>AC Maintenance</div></li>
-                                                                        
-                                                                </ul>
+                                                                <Link to="/Ac Services" style={{ color: "#ccc", textDecoration: "none", fontSize: "14px", display: "block", padding: "4px 0", hover: { color: "#fff" } }}>AC Services</Link>
+                                                                <Link to="/Refrigerator Services" style={{ color: "#ccc", textDecoration: "none", fontSize: "14px", display: "block", padding: "4px 0", hover: { color: "#fff" } }}>Refrigerator Services</Link>
+                                                                <Link to="/Water cooler Services" style={{ color: "#ccc", textDecoration: "none", fontSize: "14px", display: "block", padding: "4px 0", hover: { color: "#fff" } }}>Water Cooler Services</Link>
+                                                                <Link to="/Washing machine Services" style={{ color: "#ccc", textDecoration: "none", fontSize: "14px", display: "block", padding: "4px 0", hover: { color: "#fff" } }}>Washing Machine Services</Link>
+                                                                {/* <span style={{ color: "#ccc", fontSize: "14px", display: "block", padding: "4px 0" }}>AC Maintenance</span>
+                                                                <span style={{ color: "#ccc", fontSize: "14px", display: "block", padding: "4px 0" }}>Refrigerator Maintenance</span>
+                                                                <span style={{ color: "#ccc", fontSize: "14px", display: "block", padding: "4px 0" }}>Gas Refilling</span>
+                                                                <span style={{ color: "#ccc", fontSize: "14px", display: "block", padding: "4px 0" }}>Annual Service Contracts</span> */}
                                                         </div>
                                                 </div>
 
-                                                {/* Subscribe Section */}
-                                                <div style={{ flex: "1 1 25%", minWidth: "250px", height:"100%" }}>
+                                                {/* Subscribe Section */}<div style={{ flex: "1 1 15%", minWidth: "100px", height:"100%" }}>
                                                         <h3 style={{ color: "gray", fontSize: "20px" }}>
-                                                                Subscribe to Newsletter 
+                                                                Privacy policy
                                                         </h3>
+                                                        <div style={{paddingTop:"10px"}}>
+                                                                {/* <div  style={{ color: "gray",}}>
+                                                                        Address
+                                                                </div> */}
+                                                                <div>
+                                                                        <Link to="/Terms-Conditions" style={{color:"gray", textDecoration:"none"}}>Terms & Conditions</Link>
+                                                                </div>
+                                                        </div>
+                                                        <div  style={{paddingTop:"10px"}}>
+                                                                {/* <div  style={{ color: "gray",}}>
+                                                                        Phone
+                                                                </div> */}
+                                                                <div>
+                                                                        <Link to="/Shipping-Policy" style={{color:"gray", textDecoration:"none"}}>Shipping Policy</Link>
+                                                                </div>
+                                                        </div>
+                                                        <div  style={{paddingTop:"10px"}}>
+                                                                {/* <div  style={{ color: "gray",}}>
+                                                                        Email
+                                                                </div> */}
+                                                                <div>
+                                                                        <Link to="/Refund-Policy" style={{color:"gray", textDecoration:"none"}}>Refund Policy</Link>
+                                                                </div>
+                                                        </div>
+                                                        
+
+                                                        
+                                                </div>
+
+
+                                                <div style={{ flex: "1 1 20%", minWidth: "250px", height:"100%" }}> 
                                                         <div style={{paddingTop:"10px"}}>
                                                                 <div  style={{ color: "gray",}}>
                                                                         Address
